@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@media print {
+  @page {
+    size: A4;
+    @bottom-center {
+      font-size: 6pt;
+      background: yellow;
+      content: "This is page " counter(page) " of " counter(pages);
+    }
+  }
+
+  @media screen {
+    body {
+      background-color: var(--color-background);
+    }
+
+    .pagedjs_pages {
+      margin: 0 auto;
+    }
+
+    .pagedjs_page {
+      border: 1px solid black;
+      background-color: var(--color-paper);
+      box-shadow: 0 0 0 1px var(--color-pageBox);
+      margin: 0 auto;
+      flex-shrink: 0;
+      flex-grow: 0;
+
+      margin-top: 10mm;
+    }
+
+    .pagedjs_ .pagedjs_page:last-of-type {
+      margin-bottom: 10mm;
+    }
+
+    /* show the margin-box */
+
+    .pagedjs_margin-top-left-corner-holder,
+    .pagedjs_margin-top,
+    .pagedjs_margin-top-left,
+    .pagedjs_margin-top-center,
+    .pagedjs_margin-top-right,
+    .pagedjs_margin-top-right-corner-holder,
+    .pagedjs_margin-bottom-left-corner-holder,
+    .pagedjs_margin-bottom,
+    .pagedjs_margin-bottom-left,
+    .pagedjs_margin-bottom-center,
+    .pagedjs_margin-bottom-right,
+    .pagedjs_margin-bottom-right-corner-holder,
+    .pagedjs_margin-right,
+    .pagedjs_margin-right-top,
+    .pagedjs_margin-right-middle,
+    .pagedjs_margin-right-bottom,
+    .pagedjs_margin-left,
+    .pagedjs_margin-left-top,
+    .pagedjs_margin-left-middle,
+    .pagedjs_margin-left-bottom {
+      box-shadow: 0 0 0 1px inset var(--color-marginBox);
+    }
+  }
+}
